@@ -1,8 +1,9 @@
 <template>
   <section class="vw-hw-section">
     <div class="vw-hw-input">
-      <h1 class="vw-hw-header">{{gretting}}</h1>
+      <h1 class="vw-hw-header">{{greeting}}</h1>
       <div class="vw-hw-contentInputs">
+        <h2>Directivas</h2>
         <input v-model="nombre" type="text" placeholder="Escriba su nombre" >: {{nombre}}
         <p v-if="nombre == 'José'">tu nombre es: {{nombre}}</p>
         <p v-else>Tu nombre no es José</p>
@@ -35,7 +36,7 @@ export default {
   data(){
     return{
       nombre: 'José',
-      gretting: 'Hello from vueJS data',
+      greeting: 'Hello from vueJS data',
       users: [
         {id: 1, nombre: 'Juan', red: 'http://www.facebook.com'},
         {id: 2, nombre: 'Pedro', red: 'http://www.google.com'},
@@ -64,6 +65,7 @@ export default {
     justify-content: center;
   }
   .vw-hw-table{
+    border-collapse: collapse;
     width: 80%;
     margin: 0 auto;
   }
